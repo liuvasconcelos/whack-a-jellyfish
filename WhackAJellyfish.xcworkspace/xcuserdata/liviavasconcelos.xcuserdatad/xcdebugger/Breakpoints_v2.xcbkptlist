@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "02366956-CD8E-4A10-AE15-E1C79D9110F0"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66F87757-DEA4-4EE9-AF5E-C8D533BEB0CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhackAJellyfish/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "reset(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "66F87757-DEA4-4EE9-AF5E-C8D533BEB0CC - 9eabe483e9760c3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WhackAJellyfish.ViewController.reset(Any) -&gt; ()"
+                  moduleName = "WhackAJellyfish"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liviavasconcelos/LiuDocuments/iOSProjects/Courses/ARKIt%20Course/WhackAJellyfish/WhackAJellyfish/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "66F87757-DEA4-4EE9-AF5E-C8D533BEB0CC - 1dde14e410dfd53d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.SCNNode, Swift.UnsafeMutablePointer&lt;ObjectiveC.ObjCBool&gt;) -&gt; () in WhackAJellyfish.ViewController.reset(Any) -&gt; ()"
+                  moduleName = "WhackAJellyfish"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liviavasconcelos/LiuDocuments/iOSProjects/Courses/ARKIt%20Course/WhackAJellyfish/WhackAJellyfish/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C142E79-732C-43C7-837E-B8269124A12C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhackAJellyfish/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "reset(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

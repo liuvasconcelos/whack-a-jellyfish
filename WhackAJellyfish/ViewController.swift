@@ -79,7 +79,10 @@ class ViewController: UIViewController {
         jellyfishNode?.position = SCNVector3(randomNumbers(firstNum: -1, secondNum: 1),
                                              randomNumbers(firstNum: -0.5, secondNum: 0.5),
                                              randomNumbers(firstNum: -1, secondNum: 1))
-        self.sceneView.scene.rootNode.addChildNode(jellyfishNode ?? SCNNode())
+        if let node = jellyfishNode {
+            self.sceneView.scene.rootNode.addChildNode(node)
+        }
+        
     }
     
     func animateNode(node: SCNNode) {

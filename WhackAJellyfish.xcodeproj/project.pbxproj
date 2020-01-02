@@ -15,6 +15,9 @@
 		5326090623BE679300AD7123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5326090423BE679300AD7123 /* LaunchScreen.storyboard */; };
 		5326091123BE679400AD7123 /* WhackAJellyfishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326091023BE679400AD7123 /* WhackAJellyfishTests.swift */; };
 		5326091C23BE679400AD7123 /* WhackAJellyfishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326091B23BE679400AD7123 /* WhackAJellyfishUITests.swift */; };
+		5326092A23BE715200AD7123 /* Jellyfish.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5326092923BE715200AD7123 /* Jellyfish.dae */; };
+		5326092C23BE71BF00AD7123 /* Jellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 5326092B23BE71BF00AD7123 /* Jellyfish.png */; };
+		5326093323BE729C00AD7123 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 5326093223BE729C00AD7123 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		5326091723BE679400AD7123 /* WhackAJellyfishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackAJellyfishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5326091B23BE679400AD7123 /* WhackAJellyfishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackAJellyfishUITests.swift; sourceTree = "<group>"; };
 		5326091D23BE679400AD7123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5326092923BE715200AD7123 /* Jellyfish.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Jellyfish.dae; sourceTree = "<group>"; };
+		5326092B23BE71BF00AD7123 /* Jellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Jellyfish.png; sourceTree = "<group>"; };
+		5326093223BE729C00AD7123 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		532608F823BE679100AD7123 /* WhackAJellyfish */ = {
 			isa = PBXGroup;
 			children = (
+				5326092F23BE720E00AD7123 /* JellyfishAsset */,
 				532608F923BE679100AD7123 /* AppDelegate.swift */,
 				532608FB23BE679100AD7123 /* SceneDelegate.swift */,
 				532608FD23BE679100AD7123 /* ViewController.swift */,
@@ -106,6 +113,7 @@
 				5326090223BE679300AD7123 /* Assets.xcassets */,
 				5326090423BE679300AD7123 /* LaunchScreen.storyboard */,
 				5326090723BE679300AD7123 /* Info.plist */,
+				5326093223BE729C00AD7123 /* art.scnassets */,
 			);
 			path = WhackAJellyfish;
 			sourceTree = "<group>";
@@ -126,6 +134,15 @@
 				5326091D23BE679400AD7123 /* Info.plist */,
 			);
 			path = WhackAJellyfishUITests;
+			sourceTree = "<group>";
+		};
+		5326092F23BE720E00AD7123 /* JellyfishAsset */ = {
+			isa = PBXGroup;
+			children = (
+				5326092B23BE71BF00AD7123 /* Jellyfish.png */,
+				5326092923BE715200AD7123 /* Jellyfish.dae */,
+			);
+			path = JellyfishAsset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +249,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5326092C23BE71BF00AD7123 /* Jellyfish.png in Resources */,
 				5326090623BE679300AD7123 /* LaunchScreen.storyboard in Resources */,
 				5326090323BE679300AD7123 /* Assets.xcassets in Resources */,
 				5326090123BE679100AD7123 /* Main.storyboard in Resources */,
+				5326092A23BE715200AD7123 /* Jellyfish.dae in Resources */,
+				5326093323BE729C00AD7123 /* art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

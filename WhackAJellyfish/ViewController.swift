@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import Each
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,10 @@ class ViewController: UIViewController {
     let configuration = ARWorldTrackingConfiguration()
     
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var timer: UILabel!
+    
+    var timerControl = Each(1).seconds
+    var countDown    = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,30 +38,47 @@ class ViewController: UIViewController {
         
         if hitTest?.isEmpty ?? true {
             print("Did not touch")
-        } else {
+        } else if countDown > 0 {
             let results = hitTest?.first
             let node    = results?.node ?? SCNNode()
             
             if node.animationKeys.isEmpty {
+                SCNTransaction.begin()
                 self.animateNode(node: node)
+                SCNTransaction.completionBlock = {
+                    node.removeFromParentNode()
+                    self.addNode()
+                    self.restoreTimer()
+                }
+                SCNTransaction.commit()
             }
             
         }
     }
 
     @IBAction func play(_ sender: Any) {
-        addNode()
+        self.setTimer()
+        self.addNode()
         self.playButton.isEnabled = false
     }
     
     @IBAction func reset(_ sender: Any) {
+        timerControl.stop()
+        self.restoreTimer()
+        self.playButton.isEnabled = true
+        
+        sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
     }
     
     func addNode() {
         let jellyfishScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
         let jellyfishNode  = jellyfishScene?.rootNode.childNode(withName: "Sphere", recursively: false)
         
-        jellyfishNode?.position = SCNVector3(0,0,-1)
+        jellyfishNode?.position = SCNVector3(randomNumbers(firstNum: -1, secondNum: 1),
+                                             randomNumbers(firstNum: -0.5, secondNum: 0.5),
+                                             randomNumbers(firstNum: -1, secondNum: 1))
         self.sceneView.scene.rootNode.addChildNode(jellyfishNode ?? SCNNode())
     }
     
@@ -70,6 +92,28 @@ class ViewController: UIViewController {
         spin.autoreverses = true
         spin.repeatCount  = 5
         node.addAnimation(spin, forKey: "position")
+    }
+    
+    func randomNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+    }
+    
+    func setTimer() {
+        timerControl.perform { () -> NextStep in
+            self.countDown -= 1
+            self.timer.text = String(self.countDown)
+            
+            if self.countDown == 0 {
+                self.timer.text = "You lose!"
+                return .stop
+            }
+            return .continue
+        }
+    }
+    
+    func restoreTimer() {
+        self.countDown = 10
+        self.timer.text = String(self.countDown)
     }
 }
 
